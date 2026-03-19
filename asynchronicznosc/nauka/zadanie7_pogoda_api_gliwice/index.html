@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 7: Pogoda API – Gliwice</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 2rem; background-color: #fce7f3; color: #1f2937; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); border-top: 4px solid #db2777; }
+        h1 { border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; color: #be185d; font-size: 1.8rem; }
+        button { display: inline-block; background-color: #db2777; color: white; border: none; padding: 0.75rem 1.5rem; margin-top: 1rem; border-radius: 6px; cursor: pointer; font-weight: bold; transition: background 0.2s ease; }
+        button:hover { background-color: #be185d; }
+        .wynik { margin-top: 1.5rem; padding: 1.5rem; background-color: #fdf2f8; border-left: 5px solid #db2777; font-size: 1.1em; }
+        .wynik p { margin: 0.5rem 0; }
+        .wynik strong { display: inline-block; min-width: 140px; }
+        .loader { display: none; width: 40px; height: 40px; border: 4px solid #f3f3f3; border-top: 4px solid #db2777; border-radius: 50%; animation: spin 1s linear infinite; margin: 20px auto; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        #komunikat { margin-top: 0.5rem; color: #6b7280; font-size: 0.95em; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Zadanie 7: Pogoda – Gliwice</h1>
+        <p>Kliknij przycisk, aby pobrać aktualną pogodę z API (temperatura, zachmurzenie, wiatr).</p>
+        <button id="btnPobierz">Pobierz pogodę</button>
+        <div id="loadingAnim" class="loader"></div>
+        <p id="komunikat">—</p>
+        <div class="wynik">
+            <p><strong>Temperatura:</strong> <span id="temp">—</span></p>
+            <p><strong>Zachmurzenie:</strong> <span id="zachmurzenie">—</span></p>
+            <p><strong>Wiatr:</strong> <span id="wiatr">—</span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
